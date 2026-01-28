@@ -1,39 +1,48 @@
 # Titanic Survival Prediction with Dense Neural Networks
 
-## Objective
-The objective of this project is to build and evaluate a **Dense Neural Network (DNN)**
-to predict passenger survival on the Titanic dataset.
-The task is framed as a **binary classification problem**.
+## Project Overview
+This project focuses on predicting passenger survival on the Titanic dataset using a Dense Neural Network (DNN).
+The goal is to apply an end-to-end machine learning workflow, from data preprocessing to model training and evaluation, with attention to feature engineering and model generalization.
+
+The task is framed as a binary classification problem.
 
 ## Dataset
-The project uses the Titanic dataset, which contains demographic and travel information
-about passengers aboard the Titanic.
+The project uses the public Titanic dataset from Kaggle, which contains demographic and travel-related information about passengers aboard the Titanic.
 The target variable is `Survived` (0 = Did not survive, 1 = Survived).
 
-The dataset is publicly available on Kaggle.
+## Methodology
+The workflow follows a structured machine learning pipeline:
 
-## Pipeline
-The project follows an end-to-end machine learning workflow:
-
-- Handling missing values (`Age`, `Embarked`)
-- Feature scaling using `StandardScaler`
+- Handling missing values (Age, Embarked) using statistical imputation
+- Feature scaling with StandardScaler to ensure stable neural network training
 - One-hot encoding of categorical variables
-- Train/test split
+- Train/Test split to evaluate model generalization
 - Dense Neural Network training using TensorFlow/Keras
-- Model evaluation using accuracy and confusion matrix
-- Visualization of training and validation metrics
 
 ## Model Architecture
-- Input layer based on preprocessed features
+
+- Input layer based on preprocessed numerical and categorical features
 - Two hidden Dense layers with ReLU activation
-- Output layer with Sigmoid activation
+- Output layer with Sigmoid activation for binary classification
 - Loss function: Binary Crossentropy
 - Optimizer: Adam
 
-## Results
-The model achieves good performance on both training and test sets.
-Training and validation curves show a stable learning process with mild overfitting
-after several epochs.
+ ## Results
+The model shows solid performance on unseen data:
+
+- **Train Accuracy:** 0.838  
+- **Test Accuracy:** 0.827
+
+## Visualizations
+The project includes the following visual outputs:
+
+- Training and validation loss/accuracy curves
+- Confusion matrix for classification performance analysis
+
+The confusion matrix highlights a balanced classification behavior, with a good ability to correctly
+identify both surviving and non-surviving passengers.
+Training and validation curves indicate a stable learning process, with only mild overfitting
+observed after several epochs, suggesting reasonable generalization.
 
 ## Technologies
 - Python
