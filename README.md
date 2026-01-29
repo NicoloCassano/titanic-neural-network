@@ -33,6 +33,9 @@ The model shows solid performance on unseen data:
 - **Train Accuracy:** 0.838  
 - **Test Accuracy:** 0.827
 
+### Confusion Matrix
+![Confusion Matrix](confusion_matrix.png)
+
 ## Visualizations
 The project includes the following visual outputs:
 
